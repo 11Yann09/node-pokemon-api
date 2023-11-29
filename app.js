@@ -14,6 +14,12 @@ app
 
 sequelize.initDb();
 
+require("./src/routes/findAllPokemons")(app);
+require("./src/routes/findPokemonByPk")(app);
+require("./src/routes/createPokemon")(app);
+require("./src/routes/updatePokemon")(app);
+require("./src/routes/deletePokemon")(app);
+
 app.listen(port, () =>
   console.log(`Server listening at http://localhost:${port}`)
 );
